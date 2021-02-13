@@ -52,13 +52,13 @@ namespace personal_game_library.Models
             }
         }
 
-        public string LastUsingTime
+        public string Last_Using_Time
         {
             get { return last_using_time; }
             set
             {
                 last_using_time = value;
-                OnPropertyChanged("LastUsingTime");
+                OnPropertyChanged("Last_Using_Time");
             }
         }
 
@@ -72,33 +72,33 @@ namespace personal_game_library.Models
             }
         }
 
-        public string IconLocation
+        public string Icon_Location
         {
             get { return icon_location; }
             set
             {
                 icon_location = value;
-                OnPropertyChanged("IconLocation");
+                OnPropertyChanged("Icon_Location");
             }
         }
 
-        public bool IsFavourite
+        public bool Is_Favourite
         {
             get { return is_favourite; }
             set
             {
                 is_favourite = value;
-                OnPropertyChanged("IsFavourite");
+                OnPropertyChanged("Is_Favourite");
             }
         }
 
-        public int TotalUsingTimeMinutes
+        public int Total_Using_Time_Minutes
         {
             get { return total_using_time_minutes; }
             set
             {
                 total_using_time_minutes = value;
-                OnPropertyChanged("TotalUsingTimeMinutes");
+                OnPropertyChanged("Total_Using_Time_Minutes");
             }
         }
 
