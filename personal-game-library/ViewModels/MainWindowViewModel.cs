@@ -9,6 +9,8 @@ namespace personal_game_library.ViewModels
 {
     class MainWindowViewModel : INotifyPropertyChanged
     {
+        public MainWindowViewModel() { }
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }
