@@ -19,4 +19,26 @@
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontWeight" Value="Medium" />
     </Style>
+
+    <Style x:Key="largeFontL" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Assets/Fonts/Dosis.ttf" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="AntiqueWhite" />
+    </Style>
+
+    <Style x:Key="mediumFontL" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Assets/Fonts/Dosis.ttf" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="AntiqueWhite" />
+    </Style>
+
+    <Style x:Key="smallFontL" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Assets/Fonts/Dosis.ttf" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="AntiqueWhite" />
+    </Style>
+
 </ResourceDictionary>

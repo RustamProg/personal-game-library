@@ -1,4 +1,5 @@
 ﻿using personal_game_library.Models;
+using personal_game_library.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace personal_game_library.ViewModels
 {
@@ -43,6 +45,21 @@ namespace personal_game_library.ViewModels
             {
                 userapps = value;
                 OnPropertyChanged("Userapps");
+            }
+        }
+
+        //Commands
+
+        private RelayCommand startApp;
+        public RelayCommand StartApp
+        {
+            get
+            {
+                return startApp ?? (startApp = new RelayCommand(obj =>
+                {
+                    string link = obj.ToString();
+                    System.Diagnostics.Process.Start(link);
+                }));
             }
         }
 
