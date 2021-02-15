@@ -76,12 +76,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Services\RelayCommand.cs" />
+    <Compile Include="TabPages\AppInfo.xaml.cs">
+      <DependentUpon>AppInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabPages\LibraryControl.xaml.cs">
       <DependentUpon>LibraryControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="TabPages\SettingsControl.xaml.cs">
       <DependentUpon>SettingsControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AppInfoViewModel.cs" />
     <Compile Include="ViewModels\LibraryControlViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Page Include="MainWindow.xaml">
@@ -109,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabPages\AppInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

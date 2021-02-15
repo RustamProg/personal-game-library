@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:personal_game_library.Styles">
     
     <Style x:Key="largeFont" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="Assets/Fonts/Dosis.ttf" />
+        <Setter Property="FontFamily" Value="..\Assets\Fonts\Dosis.ttf" />
         <Setter Property="FontSize" Value="22" />
         <Setter Property="FontWeight" Value="Medium" />
     </Style>

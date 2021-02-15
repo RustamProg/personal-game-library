@@ -1,5 +1,6 @@
 ﻿using personal_game_library.Models;
 using personal_game_library.Services;
+using personal_game_library.TabPages;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,7 +28,8 @@ namespace personal_game_library.ViewModels
             userapps = db.Userapps.Local.ToBindingList();
             userapp = userapps.First();
         }
-        
+
+
         // Attributes
         public Userapp Userapp
         {
@@ -62,6 +64,7 @@ namespace personal_game_library.ViewModels
                 }));
             }
         }
+
 
         // Proprty Changed Event Handler
         public event PropertyChangedEventHandler PropertyChanged;

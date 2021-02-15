@@ -9,107 +9,25 @@ using System.Threading.Tasks;
 
 namespace personal_game_library.Models
 {
-    class Userapp : INotifyPropertyChanged
+    public class Userapp
     {
-        private string title;
-        private string description;
-        private string author;
-        private string last_using_time;
-        private string location;
-        private string icon_location;
-        private bool is_favourite;
-        private int total_using_time_minutes;
         [Key]
         public int Id { get; set; }
 
-        public string Title
-        {
-            get { return title; }
-            set
-            {
-                title = value;
-                OnPropertyChanged("Title");
-            }
-        }
+        public string Title { get; set; }
 
-        public string Description
-        {
-            get { return description; }
-            set
-            {
-                description = value;
-                OnPropertyChanged("Description");
-            }
-        }
+        public string Description { get; set; }
 
-        public string Author
-        {
-            get { return author; }
-            set
-            {
-                author = value;
-                OnPropertyChanged("Author");
-            }
-        }
+        public string Author { get; set; }
 
-        public string Last_Using_Time
-        {
-            get { return last_using_time; }
-            set
-            {
-                last_using_time = value;
-                OnPropertyChanged("Last_Using_Time");
-            }
-        }
+        public string Last_Using_Time { get; set; }
 
-        public string Location
-        {
-            get { return location; }
-            set
-            {
-                location = value;
-                OnPropertyChanged("Location");
-            }
-        }
+        public string Location { get; set; }
 
-        public string Icon_Location
-        {
-            get { return icon_location; }
-            set
-            {
-                icon_location = value;
-                OnPropertyChanged("Icon_Location");
-            }
-        }
+        public string Icon_Location { get; set; }
 
-        public bool Is_Favourite
-        {
-            get { return is_favourite; }
-            set
-            {
-                is_favourite = value;
-                OnPropertyChanged("Is_Favourite");
-            }
-        }
+        public bool Is_Favourite { get; set; }
 
-        public int Total_Using_Time_Minutes
-        {
-            get { return total_using_time_minutes; }
-            set
-            {
-                total_using_time_minutes = value;
-                OnPropertyChanged("Total_Using_Time_Minutes");
-            }
-        }
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-            }
-        }
+        public int Total_Using_Time_Minutes { get; set; }
     }
 }

@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 namespace personal_game_library.ViewModels
 {
-    class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
         // Main fields and constructor
         private UserControl selectedTab;

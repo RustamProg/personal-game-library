@@ -12,7 +12,10 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
+        <!-- Header -->
         <TextBlock Text="Library" Style="{StaticResource largeFont}" FontSize="42" Margin="10 0 0 0"/>
+
+        <!-- Main user applications list -->
         <ListBox ItemsSource="{Binding Userapps}" Grid.Row="1" Background="{StaticResource fourColor}"
                  ItemContainerStyle="{StaticResource gameLibraryListBoxItems}" BorderThickness="0">
             <ListBox.ItemTemplate>
@@ -21,19 +24,23 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*" />
                             <ColumnDefinition Width="0.2*" />
-                            
                         </Grid.ColumnDefinitions>
                         
                         <StackPanel Orientation="Vertical" Grid.Column="0">
                             <TextBlock Text="{Binding Title}" Margin="0 0 0 0" Style="{StaticResource largeFontL}"/>
                             <TextBlock Text="{Binding Description}" Margin="0 10 0 0" Style="{StaticResource mediumFontL}"/>
                             <TextBlock Text="{Binding Author}" Margin="0 20 0 0" Style="{StaticResource smallFontL}" />
+
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" Grid.Column="1">
-                            <Button Content="Run" MinHeight="70" Margin="10" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBox}}, Path=DataContext.StartApp}"
+                            <Button Content="Run" Margin="10" 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Style="{StaticResource buttonRun}"
+                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBox}}, Path=DataContext.StartApp}"
                                     CommandParameter="{Binding Location}"/>
-                            <Grid VerticalAlignment="Stretch">
+                            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
                                     <ColumnDefinition />
