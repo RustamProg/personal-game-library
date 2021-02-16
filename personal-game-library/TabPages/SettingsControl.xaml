@@ -26,11 +26,33 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="20 0 20 0">
                 <TextBlock Text="Save apps" Style="{StaticResource largeFont}" Margin="20"
                            HorizontalAlignment="Center"/>
                 <TextBlock Text="Filename" Style="{StaticResource mediumFont}" />
-                <TextBox Text="{}" />
+                <TextBox Text="{Binding FileName, Mode=TwoWay}" Style="{StaticResource inputTextBoxStyle}" Margin="0 0 0 20" IsEnabled="False"/>
+                <TextBlock Text="Save directory path" Style="{StaticResource mediumFont}" />
+                <TextBox Text="{Binding FilePath, Mode=TwoWay}" Style="{StaticResource inputTextBoxStyle}" IsEnabled="False" Margin="0 0 0 15"/>
+                <Button Content="Select directory" Command="{Binding OpenFilePathDialog}" Style="{StaticResource selectPathButton}" HorizontalAlignment="Left" Margin="0 0 0 20"/>
+                <ComboBox ItemsSource="{Binding FavouriteTypes}" SelectedItem="{Binding CurrentType, Mode=TwoWay}"
+                          Style="{StaticResource comboBoxStyle}"
+                          ItemContainerStyle="{StaticResource comboBoxItemStyle}" Margin="0 0 50 10">
+                </ComboBox>
+                <Button Content="Save" Command="{Binding SaveApplications}" Style="{StaticResource selectPathButton}" HorizontalAlignment="Left" Margin="0 0 0 20"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="20 0 20 0">
+                <TextBlock Text="About application" Style="{StaticResource largeFont}"
+                           HorizontalAlignment="Center"  Margin="20"/>
+                <TextBlock Text="This is a first application where I used MVVM pattern. 
+                           Of course, I know that Views, ViewModels, Models should separate to mulitple projects.
+                           But my goal was to make simple MVVM-project to understand basic principles
+                           of this pattern, so I separated this files to different namespaces. 
+                           It's easier to make applications using this pattern.
+                           It helped me to easiliy add new features here." TextWrapping="Wrap"
+                           Style="{StaticResource smallFont}" Margin="10"/>
+                <TextBlock Text="Sincerely, RustamProg" Style="{StaticResource mediumFont}" 
+                           HorizontalAlignment="Right" Margin="0 50 20 0"/>
             </StackPanel>
             
         </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using personal_game_library.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace personal_game_library.TabPages
         public SettingsControl()
         {
             InitializeComponent();
+            this.DataContext = new SettingControlViewModel();
         }
     }
 }

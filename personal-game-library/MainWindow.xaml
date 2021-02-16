@@ -89,12 +89,12 @@
                 <Button Content="Library" Style="{StaticResource tpMenuButtons}"
                         Command="{Binding ChangeTabContentCommand}"
                         CommandParameter="{Binding AllPages[0]}"/>
-                <Button Content="Settings" Style="{StaticResource tpMenuButtons}"
-                        Command="{Binding ChangeTabContentCommand}"
-                        CommandParameter="{Binding AllPages[1]}"/>
                 <Button Content="Favourite" Style="{StaticResource tpMenuButtons}"
                         Command="{Binding ChangeTabContentCommand}"
                         CommandParameter="{Binding AllPages[2]}"/>
+                <Button Content="Settings" Style="{StaticResource tpMenuButtons}"
+                        Command="{Binding ChangeTabContentCommand}"
+                        CommandParameter="{Binding AllPages[1]}"/>
             </StackPanel>
         </Grid>
         

@@ -23,7 +23,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="0.3*" />
                         </Grid.ColumnDefinitions>
                         
                         <StackPanel Orientation="Vertical" Grid.Column="0">
