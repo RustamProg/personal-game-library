@@ -18,14 +18,12 @@ namespace personal_game_library.ViewModels
     class LibraryControlViewModel: INotifyPropertyChanged
     {
         // Fields and constructor
-        private ApplicationContext db;
         private Userapp userapp;
         private IEnumerable<Userapp> userapps;
         public LibraryControlViewModel()
         {
-            db = new ApplicationContext();
-            db.Userapps.Load();
-            userapps = db.Userapps.Local.ToBindingList();
+            UserappsManager userappsManager= UserappsManager.Source;
+            userapps = userappsManager.GetAppsList();
             userapp = userapps.First();
         }
 

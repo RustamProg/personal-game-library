@@ -15,5 +15,25 @@
         <!-- Header -->
         <TextBlock Text="Settings" Style="{StaticResource largeFont}" FontSize="42" Margin="10"/>
 
+        <!-- 
+            Here form to save your application list
+            Also you can load it. It can be used in the future
+            (P.S. I just like work with json files)
+        -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Margin="20">
+                <TextBlock Text="Save apps" Style="{StaticResource largeFont}" Margin="20"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="Filename" Style="{StaticResource mediumFont}" />
+                <TextBox Text="{}" />
+            </StackPanel>
+            
+        </Grid>
+
     </Grid>
 </UserControl>

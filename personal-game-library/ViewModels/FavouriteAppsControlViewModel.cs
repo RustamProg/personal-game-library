@@ -14,14 +14,12 @@ namespace personal_game_library.ViewModels
     class FavouriteAppsControlViewModel: INotifyPropertyChanged
     {
         // Fields and constructor
-        private ApplicationContext db;
         private Userapp userapp;
         private IEnumerable<Userapp> userapps;
         public FavouriteAppsControlViewModel()
         {
-            db = new ApplicationContext();
-            db.Userapps.Load();
-            userapps = db.Userapps.Local.Where(v => v.Is_Favourite == true).ToList();
+            UserappsManager userappsManager = UserappsManager.Source;
+            userapps = userappsManager.GetFavouriteAppsList();
             userapp = userapps.First();
         }
 
