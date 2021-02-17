@@ -1,0 +1,33 @@
+﻿<Window x:Class="personal_game_library.Views.ApplicationDescriptionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:personal_game_library.Views"
+        mc:Ignorable="d"
+        Title="ApplicationDescriptionView" Height="500" Width="500" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Grid>
+        <Border Background="{StaticResource mainColor}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="0.4*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical" Margin="30" Grid.Column="0">
+                    <TextBlock Text="Needs binding" Style="{StaticResource largeFont}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Needs binding" Style="{StaticResource mediumFont}" Margin="0 20 0 0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20">
+                    <Button Content="Run" />
+                    <TextBlock Text="Needs binding" Style="{StaticResource smallFont}" />
+                    <TextBlock Text="Needs binding" Style="{StaticResource smallFont}" />
+                    <Button Content="Delete" VerticalAlignment="Bottom" />
+                </StackPanel>
+                
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

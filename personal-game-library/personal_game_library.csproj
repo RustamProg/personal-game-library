@@ -93,10 +93,14 @@
       <DependentUpon>SettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AppInfoViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationDescriptionViewModel.cs" />
     <Compile Include="ViewModels\FavouriteAppsControlViewModel.cs" />
     <Compile Include="ViewModels\LibraryControlViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\SettingControlViewModel.cs" />
+    <Compile Include="Views\ApplicationDescriptionView.xaml.cs">
+      <DependentUpon>ApplicationDescriptionView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -145,6 +149,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ApplicationDescriptionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ApplicationContext.cs" />
@@ -179,9 +187,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\Images\Library-icon.png" />
   </ItemGroup>
