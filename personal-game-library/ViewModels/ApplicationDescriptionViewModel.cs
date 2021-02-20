@@ -1,4 +1,5 @@
 ﻿using personal_game_library.Models;
+using personal_game_library.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,18 @@ namespace personal_game_library.ViewModels
             {
                 currentUserApp = value;
                 OnPropertyChanged("CurrentUserApp");
+            }
+        }
+
+        private RelayCommand closeWindow;
+        public RelayCommand CloseWindow
+        {
+            get
+            {
+                return closeWindow ?? (closeWindow = new RelayCommand(obj =>
+                {
+                    
+                }));
             }
         }
 

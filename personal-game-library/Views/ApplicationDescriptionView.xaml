@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ApplicationDescriptionView" Height="500" Width="500" WindowStartupLocation="CenterScreen"
         WindowStyle="None" Background="Transparent" AllowsTransparency="True">
-    <Grid>
+    <Grid DataContext="{Binding CurrentUserApp}">
         <Border Background="{StaticResource mainColor}">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -17,7 +17,7 @@
 
                 <StackPanel Orientation="Vertical" Margin="30" Grid.Column="0">
                     <TextBlock Text="Needs binding header" Style="{StaticResource largeFont}" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Needs binding mainb text" Style="{StaticResource mediumFont}" Margin="0 20 0 0"/>
+                    <TextBlock Text="Needs binding main text" Style="{StaticResource mediumFont}" Margin="0 20 0 0"/>
                     <TextBlock Text="Needs binding date" Style="{StaticResource smallFont}" Margin="0 20 0 0"/>
                     
                 </StackPanel>
