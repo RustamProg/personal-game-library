@@ -191,6 +191,12 @@
   <ItemGroup>
     <Resource Include="Assets\Images\Library-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Screenshots\fav_workplace.png" />
+    <Resource Include="Screenshots\ready_json.png" />
+    <Resource Include="Screenshots\settings.png" />
+    <Resource Include="Screenshots\workplace.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
